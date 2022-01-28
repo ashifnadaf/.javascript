@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication</title>
+</head>
+
+<body>
+    <table>
+        <div>
+            <input type="text" name="" id="result" placeholder="Enter Your No ">
+            <button onclick="clearresult()">c</button><br><br>
+
+        </div>
+        <div>
+            <tr>
+                <td>
+                    <button onclick="dispalyno(this)">7</button>
+                    <button onclick="dispalyno(this)">8</button>
+                    <button onclick="dispalyno(this)">9</button>
+                    <button onclick="dispalyno(this)">+</button><br><br>
+                </td>
+            </tr>
+        </div>
+        <div>
+            <tr>
+                <td>
+                    <button onclick="dispalyno(this)">4</button>
+                    <button onclick="dispalyno(this)">5</button>
+                    <button onclick="dispalyno(this)">6</button>
+                    <button onclick="dispalyno(this)">-</button><br><br>
+                </td>
+            </tr>
+        </div>
+        <div>
+            <tr>
+                <td>
+                    <button onclick="dispalyno(this)">1</button>
+                    <button onclick="dispalyno(this)">2</button>
+                    <button onclick="dispalyno(this)">3</button>
+                    <button onclick="dispalyno(this)">*</button><br><br>
+                </td>
+            </tr>
+        </div>
+        <div>
+            <tr>
+                <td>
+                    <button onclick="dispalyno(this)">0</button>
+                    <button onclick="dispalyno(this)">.</button>
+                    <button onclick="dispalyno(this)">/</button>
+                    <button onclick="calculate()">result</button><br><br>
+                </td>
+            </tr>
+        </div>
+
+    </table>
+    <script>
+        function dispalyno(ctrl) {
+            document.getElementById("result").value += ctrl.innerText;
+        }
+
+        function clearresult() {
+            document.getElementById("result").value = "";
+        }
+        function calculate() {
+
+            document.getElementById("result").value = eval(document.getElementById("result").value)
+
+
+        }
+    </script>
+</body>
+
+</html>
