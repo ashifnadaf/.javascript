@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="mytext" />
+    <button onclick="test()">Test</button>
+    <button onclick="exec()">Exec</button>
+    <button onclick="compile()">Compile</button>
+    <button onclick="validate()">Validate Email</button>
+    <button onclick="validatemymobile()">Validate Mobile</button>
+
+    <script>
+        function test() {
+            var text = document.getElementById("mytext").value;
+            var pat = new RegExp("e");
+            let result = pat.test(text);
+            alert(result);
+        }
+
+        
+        function compile() {
+            var text = document.getElementById("mytext").value;
+            var pat = new RegExp("e");
+            let result = pat.test(text);
+            alert(result);
+            pat.compile("d");
+            result = pat.test(text);
+            alert(result);
+        }
+
+
+        function validate() {
+            var text = document.getElementById("mytext").value;
+            let result = ValidateEmail(text);
+            alert(result);
+        }
+
+        function validatemymobile() {
+            var text = document.getElementById("mytext").value;
+            let result = validatemobileno(text);
+            alert(result);
+        }
+
+        function ValidateEmail(mail) 
+        {
+            var pat = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+            if (pat.test(mail))
+            {
+                return (true)
+            }
+            return (false)
+        }
+
+        function validatemobileno(mobileno) {            
+            var pat = new RegExp(/^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[6789]\d{9}$/);
+            if (pat.test(mobileno))
+            {
+                return (true)
+            }
+            return (false)
+        }
+    </script>
+</body>
+</html>

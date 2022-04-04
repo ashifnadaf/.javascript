@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="function1()">Function 1</button>
+    <button onclick="function2()">Function 2</button>
+    <button onclick="function3()">Function 3</button>
+
+    <button onclick="functionpara1(20)">Parameter Function 1</button>
+    <button onclick="functionpara2(30)">Parameter Function 2</button>
+    <button onclick="functionpara3(40)">Parameter Function 3</button>
+    <script>
+        function function1() {
+            alert("Function 1");
+        }
+
+        var function2 = function(){
+            alert("Function 2");
+        }
+
+        var function3 = ()=>{
+            alert("Function 3");
+        }
+
+        function functionpara1(no) {
+            alert("Function 1 - " + no);
+        }
+
+        var functionpara2 = function(no){
+            alert("Function 2 - " + no);
+        }
+
+        var functionpara3 = (no)=>{
+            alert("Function 3 - " + no);
+        }
+
+    </script>
+</body>
+</html>

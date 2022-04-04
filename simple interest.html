@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function display()
+        {
+            let p = document.getElementById("p").value;
+            let r = document.getElementById("r").value;
+            let t = document.getElementById("t").value;
+        
+            
+            let result = ((p)*(r)*(t))/100;
+            document.getElementById("result").innerHTML=("simple interest is :"+result)
+        }
+    </script>
+</head>
+<body>
+    <h1>Initial principal balance :</h1>
+    <input type="number" name="" id="p"><br>
+    <h1>Annual interest rate:</h1>
+    <input type="number" name="" id="r"><br>
+    <h1>Time:</h1>
+    <input type="number" name="" id="t"><br><br>
+    <button onclick="display()">click</button>
+    <div id="result"></div>
+
+</body>
+</html>

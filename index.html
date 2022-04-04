@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <button onclick="display()">click on to me display date and time</button><br><br>
+   <button onclick="Text()"> click </button>
+   <div id="result">can be change html content</div>
+   <script>
+       function display()
+       {
+           document.getElementById("result").innerHTML=Date();
+           
+       }
+       function Text()
+       {
+        document.getElementById("result").innerHTML="Hello javascript"
+       }
+
+   </script>
+</body>
+</html>

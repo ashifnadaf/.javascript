@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>Marathi :</label>
+    <input type="text" name="" id="sub1" placeholder="Enter your mark"><br><br>
+    <label>English :</label>
+    <input type="text" name="" id="sub2" placeholder="Enter your mark"><br><br>
+    <label for="">Maths</label>
+    <input type="text" name="" id="sub3" placeholder="Enter your mark"><br><br>
+    <label for="">Physics :</label>
+    <input type="text" name="" id="sub4" placeholder="Enter your mark"><br><br>
+    Biology :
+    <input type="text" name="" id="sub5" placeholder="Enter your mark"><br><br>
+    <button onclick="addper()">addition and function</button><br><br>
+    <button onclick="grade()">grade</button></button>
+    <div id="adition"></div>
+    <div id="percentage"></div>
+    <div id="grade"></div>
+
+    <script>
+        function addper()
+        {
+            let a = document.getElementById("sub1").value;
+            let b = document.getElementById("sub2").value;
+            let c = document.getElementById("sub3").value;
+            let d = document.getElementById("sub4").value;
+            let e = document.getElementById("sub5").value;
+            let addition = parseInt(a) + parseInt(b) + parseInt(c) + parseInt(d) + parseInt(e);
+            let percentage = (addition / 500) * 100;
+
+            document.getElementById("adition").innerHTML = ("addition is :" + addition)
+            document.getElementById("percentage").innerHTML =("percentage is :" + percentage)
+        }
+
+        function grade()
+        {
+            let a = document.getElementById("sub1").value;
+            let b = document.getElementById("sub2").value;
+            let c = document.getElementById("sub3").value;
+            let d = document.getElementById("sub4").value;
+            let e = document.getElementById("sub5").value;
+            let addition = parseInt(a) + parseInt(b) + parseInt(c) + parseInt(d) + parseInt(e);
+            let percentage = (addition / 500) * 100;
+
+            if(percentage>=70)
+            {
+                document.getElementById("grade").innerHTML= ("Distiction")
+            }
+            else if(percentage>=60)
+            {
+                document.getElementById("grade").innerHTML= ("A")
+
+            }
+            else if(percentage>=50)
+            {
+                document.getElementById("grade").innerHTML= ("B")
+
+            }
+            else if(percentage>=40)
+            {
+                document.getElementById("grade").innerHTML= ("C")
+
+            }
+            else if(percentage < 40)
+            {
+                document.getElementById("grade").innerHTML= ("fail")
+
+            }
+            
+        }
+        
+    </script>
+</body>
+
+</html>

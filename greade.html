@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        maths
+        <input type="text" name="" id="math">
+        <br><br>
+        English 
+        <input type="text" name="" id="eng">
+        <br><br>
+        Sci
+        <input type="text" name="" id="sci">
+        <br><br>
+        Marathi
+        <input type="text" name="" id="marathi">
+        <br><br>
+        Hindi
+        <input type="text" name="" id="Hindi">
+     </div>
+     <button onclick="get()">
+         Submit
+     </button>
+     <div id="addition"></div>
+     <div id="per"></div>
+     <div id="gred"></div>
+     <!-- <div id="gred1"></div>
+     <div id="gred2"></div>ss
+     <div id="gred3"></div>
+     <div id="gred4"></div> -->
+    
+     <script>
+         get = () =>
+         {  
+            let a = document.getElementById("math").value;
+            let b = document.getElementById("eng").value;
+            let c = document.getElementById("sci").value;
+            let d = document.getElementById("marathi").value;
+            let e = document.getElementById("Hindi").value;
+
+            let addition = (parseInt(a)+parseInt(b)+parseInt(c)+parseInt(d)+parseInt(e))
+            let per = (addition/500)*100;
+            document.getElementById("addition").innerHTML=("The addition is :"+addition);
+            document.getElementById("per").innerHTML=("The percentage is :"+per);
+
+            if(per >=70){
+               document.getElementById("gred").innerHTML="Distinction";
+            }else if(per >=60){
+                document.getElementById("gred").innerHTML="A";
+            }else if(per >=50){
+                document.getElementById("gred").innerHTML="B";
+            }else if(per >=40){
+                document.getElementById("gred").innerHTML="C";
+            }else if(per <40){
+                 document.getElementById("gred").innerHTML="Fail";
+            }
+           
+        
+        }
+
+     </script>
+
+    
+    
+    
+</body>
+</html>

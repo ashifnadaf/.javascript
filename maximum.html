@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="no1" id="no1" placeholder="Enter number first"><br><br>
+    <input type="number" name="no2" id="no2" placeholder="Enter number second"><br><br>
+    <button onclick="display()">max</button>
+    <div id="result"></div>
+    <script>
+        function display()
+        {
+            var no1 = document.getElementById("no1").value;
+            var no2 = document.getElementById("no2").value;
+            document.getElementById("result").innerHTML=Math.max(no1,no2)
+        }
+      
+    </script>
+</body>
+</html>

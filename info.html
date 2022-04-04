@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>informatio</title>
+</head>
+
+<body>
+    Name:
+    <input type="text" name="name" id="name"><br><br>
+
+    About You:
+    <textarea name="about" id="about"></textarea><br><br>
+    Gender:
+    <label><input type="radio" name="gender" id="male">Male</label>
+    <label><input type="radio" name="gender" id="female">Female</label>
+    <label><input type="radio" name="gender" id="other">Other</label><br><br>
+    Hobbies:
+    <label><input type="checkbox" name="hobbies" id="cricket">Cricket</label>
+    <label><input type="checkbox" name="hobbies" id="chase">Chase</label>
+    <label><input type="checkbox" name="hobbies" id="football">foootball</label>
+    <hr><br><br>
+
+    <BUtton onclick="display()">Display</BUtton><br><br>
+    <div id="display"></div>
+
+    <script>
+        function display() {
+            var name = document.getElementById("name").value;
+            var about = document.getElementById("about").value;
+            var gender = "";
+            if (document.getElementById("male").checked)
+                gender = " male";
+            if (document.getElementById("female").checked)
+                gender = "female";
+            var hobbies = "";
+            if (document.getElementById("cricket").checked)
+                hobbies = "cricket";
+            if (document.getElementById("chase").checked)
+                hobbies+=(hobbies == "" ? "" : ", ") + "chase";
+            if(document.getElementById("football").checked)
+                hobbies+=(hobbies == "" ? "" : ", ")+"football";
+                
+            var str = "<b> Name:</b>"  + name + "<br>";
+            str += " <b> About You:</b>" + about +"<br>";
+            str += "<b> Gender :</b>" + gender + "<br>";
+            str +="<b> Hobbies :</b>" + hobbies + "<br>";
+
+            document.getElementById("display").innerHTML = str;
+        }
+    </script>
+
+
+</html>
